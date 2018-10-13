@@ -1,11 +1,17 @@
 package com.hutao.androidappdesignproject.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.hutao.androidappdesignproject.R;
 
-public class GuideActivity extends AppCompatActivity {
+import java.util.concurrent.TimeUnit;
+
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
+
+public class GuideActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,10 +19,20 @@ public class GuideActivity extends AppCompatActivity {
         setContentView(R.layout.activity_guide);
 
 
+        startNextMainActivity();
 
+    }
 
+    private void startNextMainActivity() {
 
-
-
+        Observable.timer(0, TimeUnit.SECONDS, Schedulers.io())
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<Long>() {
+                    @Override
+                    public void accept(Long aLong) throws Exception {
+                        startNextActivity(MainActivity.class);
+                        finish();
+                    }
+                });
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item-->
+        <!--android:id="@+id/action_search"-->
+        <!--android:icon="@drawable/ic_chevron_left_black_24dp"-->
+        <!--android:title="Search"-->
+        <!--app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/action_add"
+        android:orderInCategory="101"
+        android:title="添加"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_del"
+        android:orderInCategory="102"
+        android:title="删除"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="分享"
+        app:showAsAction="never" />
+
+</menu>

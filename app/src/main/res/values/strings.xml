@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">AndroidAppDesignProject</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="ui">
+        <item>ui0</item>
+        <item>ui1</item>
+        <item>ui2</item>
+    </string-array>
+
+    <string-array name="db">
+        <item>db0</item>
+        <item>db1</item>
+        <item>db2</item>
+    </string-array>
+
+    <string-array name="net">
+        <item>net0</item>
+        <item>net1</item>
+        <item>net2</item>
+    </string-array>
+
+
 </resources>
