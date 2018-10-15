@@ -8,7 +8,7 @@ import android.view.Menu;
 import com.hutao.androidappdesignproject.R;
 import com.hutao.androidappdesignproject.adapter.FragmentPageAdapter;
 import com.hutao.androidappdesignproject.config.Constant;
-import com.hutao.androidappdesignproject.fragment.AbsBaseFragment;
+import com.hutao.androidappdesignproject.fragment.baseFragment.AbsBaseFragment;
 import com.hutao.androidappdesignproject.fragment.ListFragment;
 
 import java.util.ArrayList;
@@ -58,7 +58,7 @@ public class MainActivity extends ToolBarActivity {
     }
 
     @Override
-    String getToolbarTitleContent() {
+   public String getToolbarTitleContent() {
         return "主页";
     }
 

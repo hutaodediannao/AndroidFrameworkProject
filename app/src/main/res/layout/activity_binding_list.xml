@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 绑定 -->
+    <data>
+        <variable
+            name="presenter"
+            type="com.hutao.androidappdesignproject.dataBindingActivity.BindingListActivity.Presenter">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{ presenter.onClickAddItem }"
+            android:text="ADD"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{ presenter.onClickRemoveItem }"
+            android:text="REMOVE"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

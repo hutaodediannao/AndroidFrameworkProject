@@ -26,9 +26,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.DetailActivity"></activity>
+        <activity android:name=".activity.DetailActivity" />
         <activity android:name=".activity.ImageBrowserActivity" />
         <activity android:name=".activity.WebActivity" />
+        <activity android:name=".dataBindingActivity.BindDataBaseActivity" />
+        <activity android:name=".dataBindingActivity.BindTwoWayActivity" />
+        <activity android:name=".dataBindingActivity.BindFormulaActivity" />
+        <activity android:name=".dataBindingActivity.BindingListActivity" />
+        <activity android:name=".dataBindingActivity.BindAnimActivity" />
+        <activity android:name=".dataBindingActivity.BindAttActivity"></activity>
     </application>
 
 </manifest>

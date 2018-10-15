@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.hutao.androidappdesignproject.config.Constant;
-import com.hutao.androidappdesignproject.fragment.AbsBaseFragment;
+import com.hutao.androidappdesignproject.fragment.baseFragment.AbsBaseFragment;
 
 import java.util.List;
 

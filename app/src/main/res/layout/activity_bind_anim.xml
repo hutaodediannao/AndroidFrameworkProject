@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="presenter"
+            type="com.hutao.androidappdesignproject.dataBindingActivity.BindAnimActivity.AnimatorPresenter"/>
+        <variable
+            name="showImage"
+            type="Boolean"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <ImageView
+            android:contentDescription="Animation Show"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="@{showImage?View.VISIBLE:View.GONE}"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/red"
+            android:layout_marginTop="50dp"
+            android:text="showImage"
+            android:onCheckedChanged = "@{(v,isChecked)->presenter.onCheckedChanged(isChecked)}"/>
+    </LinearLayout>
+</layout>

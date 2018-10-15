@@ -19,7 +19,7 @@ public class Constant {
     public static final String TAB_3 = "图片加载库";
     public static final String TAB_4 = "RxJava2.0";
     public static final String TAB_5 = "DataBinding";
-    public static final String TAB_6 = "常用工具类";
+//    public static final String TAB_6 = "常用工具类";
     public static final String TAB_7 = "颜色代码";
     public static final String TAB_8 = "Android新特性";
     public static final String TAB_9 = "EventBus";
@@ -31,7 +31,7 @@ public class Constant {
         TAB_List.add(TAB_3);
         TAB_List.add(TAB_4);
         TAB_List.add(TAB_5);
-        TAB_List.add(TAB_6);
+//        TAB_List.add(TAB_6);
         TAB_List.add(TAB_7);
         TAB_List.add(TAB_8);
         TAB_List.add(TAB_9);
@@ -77,20 +77,25 @@ public class Constant {
                 list.add("RxJava2.0基本API");
                 break;
             case Constant.TAB_5:
-                list.add("DabaBinding基本使用");
+                list.add("基本使用UI展示(@{})");
+                list.add("双向绑定{@={}}");
+                list.add("表达式使用");
+                list.add("列表绑定");
+                list.add("自定义属性");
+                list.add("动画");
                 break;
-            case Constant.TAB_6:
-                list.add("Android系统信息工具类");
-                list.add("字符串工具类");
-                list.add("时间工具类");
-                list.add("屏幕像素工具类");
-                list.add("数学计算工具类");
-                list.add("Base64加密算法工具类");
-                list.add("安卓Xml存储工具类");
-                list.add("文件操作工具类");
-                list.add("图片优化工具类");
-                list.add("拍照预览工具类");
-                break;
+//            case Constant.TAB_6:
+//                list.add("Android系统信息工具类");
+//                list.add("字符串工具类");
+//                list.add("时间工具类");
+//                list.add("屏幕像素工具类");
+//                list.add("数学计算工具类");
+//                list.add("Base64加密算法工具类");
+//                list.add("安卓Xml存储工具类");
+//                list.add("文件操作工具类");
+//                list.add("图片优化工具类");
+//                list.add("拍照预览工具类");
+//                break;
             case Constant.TAB_7:
                 list.add("常用颜色列表");
                 list.add("自定义颜色选择");

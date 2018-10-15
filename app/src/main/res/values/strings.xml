@@ -23,4 +23,5 @@
     </string-array>
 
 
+    <string name="test">测试databinding</string>
 </resources>

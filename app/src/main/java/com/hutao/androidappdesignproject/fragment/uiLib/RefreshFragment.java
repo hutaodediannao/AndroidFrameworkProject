@@ -11,7 +11,7 @@ import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.hutao.androidappdesignproject.R;
 import com.hutao.androidappdesignproject.adapter.AbsBaseRecycleAdapter;
 import com.hutao.androidappdesignproject.adapter.StringAdapter;
-import com.hutao.androidappdesignproject.fragment.AbsBaseFragment;
+import com.hutao.androidappdesignproject.fragment.baseFragment.AbsBaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;

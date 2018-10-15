@@ -7,8 +7,14 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.hutao.androidappdesignproject.R;
+import com.hutao.androidappdesignproject.dataBindingActivity.BindAnimActivity;
+import com.hutao.androidappdesignproject.dataBindingActivity.BindAttActivity;
+import com.hutao.androidappdesignproject.dataBindingActivity.BindingListActivity;
+import com.hutao.androidappdesignproject.dataBindingActivity.BindDataBaseActivity;
 import com.hutao.androidappdesignproject.config.Constant;
-import com.hutao.androidappdesignproject.fragment.AbsBaseFragment;
+import com.hutao.androidappdesignproject.dataBindingActivity.BindFormulaActivity;
+import com.hutao.androidappdesignproject.dataBindingActivity.BindTwoWayActivity;
+import com.hutao.androidappdesignproject.fragment.baseFragment.AbsBaseFragment;
 import com.hutao.androidappdesignproject.fragment.uiLib.RefreshFragment;
 
 import java.util.ArrayList;
@@ -109,9 +115,30 @@ public class DetailActivity extends ToolBarActivity {
             case Constant.TAB_4:
                 break;
             case Constant.TAB_5:
+                switch (mTagretPosition) {
+                    case 0://DataBinding数据绑定框架
+                        startNextActivity(BindDataBaseActivity.class);
+                        break;
+                    case 1://双向绑定
+                        startNextActivity(BindTwoWayActivity.class);
+                        break;
+                    case 2://表达式使用
+                        startNextActivity(BindFormulaActivity.class);
+                        break;
+                    case 3://列表绑定
+                        startNextActivity(BindingListActivity.class);
+                        break;
+                    case 4://自定义属性
+                        startNextActivity(BindAttActivity.class);
+                        break;
+                    case 5://动画
+                        startNextActivity(BindAnimActivity.class);
+                        break;
+                }
+                finish();
                 break;
-            case Constant.TAB_6:
-                break;
+//            case Constant.TAB_6:
+//                break;
             case Constant.TAB_7:
                 break;
             case Constant.TAB_8:
@@ -131,10 +158,5 @@ public class DetailActivity extends ToolBarActivity {
     private void parsetIntent() {
         mTitle = getIntent().getStringExtra(TITLE);
         mTagretPosition = getIntent().getIntExtra(TARGET_POSITION, 0);
-    }
-
-    @Override
-    String getToolbarTitleContent() {
-        return null;
     }
 }

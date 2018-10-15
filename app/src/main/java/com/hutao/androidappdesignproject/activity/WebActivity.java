@@ -78,11 +78,6 @@ public class WebActivity extends ToolBarActivity {
     }
 
     @Override
-    String getToolbarTitleContent() {
-        return null;
-    }
-
-    @Override
     protected void onDestroy() {
         if (mWebView != null)
             mWebView.destroy();

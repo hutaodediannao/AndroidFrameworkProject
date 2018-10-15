@@ -16,7 +16,7 @@ import com.hutao.androidappdesignproject.util.StringUtil;
  * 作者: 胡涛
  * 时间: 2018-10-9 18:28
  */
-public abstract class ToolBarActivity extends BaseActivity {
+public class ToolBarActivity extends BaseActivity {
 
     private View mRootView;
     private FrameLayout mContainer;
@@ -78,6 +78,8 @@ public abstract class ToolBarActivity extends BaseActivity {
         mTitleTv.setText(title);
     }
 
-   abstract String getToolbarTitleContent();
+   public String getToolbarTitleContent(){
+       return "";
+   }
 
 }

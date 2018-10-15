@@ -1,6 +1,7 @@
-package com.hutao.androidappdesignproject.fragment;
+package com.hutao.androidappdesignproject.fragment.baseFragment;
 
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hutao.androidappdesignproject.activity.BaseActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hutao on 2018-10-11.
@@ -17,7 +21,9 @@ public abstract class AbsBaseFragment extends Fragment{
 
     public View mRootView;
     private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
     public String mParam1;
+    public List<Parcelable> mParcelables;
 
     public static AbsBaseFragment newInstance(String param1, Class fragmentCla) {
         AbsBaseFragment fragment = null;
@@ -32,6 +38,19 @@ public abstract class AbsBaseFragment extends Fragment{
         return fragment;
     }
 
+    public static AbsBaseFragment newInstance(ArrayList<Parcelable> parcelables, Class fragmentCla) {
+        AbsBaseFragment fragment = null;
+        try {
+            fragment = (AbsBaseFragment) fragmentCla.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Bundle args = new Bundle();
+        args.putParcelableArrayList(ARG_PARAM2, parcelables);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     public String getTitle() {
         return mParam1;
     }
@@ -42,6 +61,7 @@ public abstract class AbsBaseFragment extends Fragment{
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
+            mParcelables = getArguments().getParcelableArrayList(ARG_PARAM2);
         }
     }
 

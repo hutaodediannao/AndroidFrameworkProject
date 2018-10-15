@@ -1,5 +1,6 @@
 package com.hutao.androidappdesignproject.fragment;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -8,34 +9,27 @@ import android.widget.ListView;
 import com.hutao.androidappdesignproject.R;
 import com.hutao.androidappdesignproject.activity.DetailActivity;
 import com.hutao.androidappdesignproject.config.Constant;
+import com.hutao.androidappdesignproject.fragment.baseFragment.AbsBaseFragment;
+import com.hutao.androidappdesignproject.fragment.baseFragment.AbsListFragment;
 
-public class ListFragment extends AbsBaseFragment {
+import java.util.List;
 
-    private ListView listView;
-    private ArrayAdapter<String> adapter;
+/**
+ * 描述: 字符串列表展示
+ * 作者: 胡涛
+ * 时间: 2018-10-15 10:57
+ */
+public class ListFragment extends AbsListFragment<String> {
 
     @Override
-    public int getLayout() {
-        return R.layout.fragment_list;
+    public List<String> getContentLsit() {
+        return Constant.getTAB_List(mParam1);
     }
 
     @Override
-    public void initView() {
-        listView = findView(R.id.listView);
-    }
-
-    @Override
-    public void handEvent() {
-        adapter = new ArrayAdapter<>(this.getContext(),
-                android.R.layout.simple_list_item_1, Constant.getTAB_List(mParam1));
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //点击列表跳转到对应的页面
-                DetailActivity.startNextActivity(mParam1, position, getContext());
-            }
-        });
+    public void clickItem(String s, int position, Context context) {
+        //点击列表跳转到对应的页面
+        DetailActivity.startNextActivity(mParam1, position, getContext());
     }
 
 }
