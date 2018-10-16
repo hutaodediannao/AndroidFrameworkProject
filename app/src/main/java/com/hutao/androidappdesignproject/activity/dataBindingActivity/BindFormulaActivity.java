@@ -1,4 +1,4 @@
-package com.hutao.androidappdesignproject.dataBindingActivity;
+package com.hutao.androidappdesignproject.activity.dataBindingActivity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -9,7 +9,6 @@ import com.hutao.androidappdesignproject.R;
 import com.hutao.androidappdesignproject.Test;
 import com.hutao.androidappdesignproject.activity.ToolBarActivity;
 import com.hutao.androidappdesignproject.databinding.ActivityFormulaBinding;
-import com.hutao.androidappdesignproject.databinding.ActivityTwoWayBindBinding;
 import com.hutao.androidappdesignproject.model.User;
 
 /**

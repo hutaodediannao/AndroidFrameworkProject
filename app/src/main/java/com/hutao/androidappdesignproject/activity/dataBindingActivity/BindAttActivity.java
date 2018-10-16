@@ -1,9 +1,7 @@
-package com.hutao.androidappdesignproject.dataBindingActivity;
+package com.hutao.androidappdesignproject.activity.dataBindingActivity;
 
-import android.content.Context;
 import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;

@@ -71,5 +71,14 @@ public class CommonRecycleHolder extends RecyclerView.ViewHolder {
         return this;
     }
 
+    /**
+     * 设置TextView颜色
+     */
+    public CommonRecycleHolder setTextViewAndColor(int textViewId, String text, int colorRes) {
+        TextView tv = getView(textViewId);
+        tv.setText(text);
+        tv.setBackgroundResource(colorRes);
+        return this;
+    }
 
 }

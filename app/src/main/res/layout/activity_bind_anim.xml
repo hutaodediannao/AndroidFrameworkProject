@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="presenter"
-            type="com.hutao.androidappdesignproject.dataBindingActivity.BindAnimActivity.AnimatorPresenter"/>
+            type="com.hutao.androidappdesignproject.activity.dataBindingActivity.BindAnimActivity.AnimatorPresenter"/>
         <variable
             name="showImage"
             type="Boolean"/>

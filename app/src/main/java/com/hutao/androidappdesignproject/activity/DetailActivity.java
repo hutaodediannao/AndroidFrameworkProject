@@ -7,13 +7,21 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.hutao.androidappdesignproject.R;
-import com.hutao.androidappdesignproject.dataBindingActivity.BindAnimActivity;
-import com.hutao.androidappdesignproject.dataBindingActivity.BindAttActivity;
-import com.hutao.androidappdesignproject.dataBindingActivity.BindingListActivity;
-import com.hutao.androidappdesignproject.dataBindingActivity.BindDataBaseActivity;
+import com.hutao.androidappdesignproject.activity.ColorActivity.NormalColorActivity;
+import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindAnimActivity;
+import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindAttActivity;
+import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindingListActivity;
+import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindDataBaseActivity;
+import com.hutao.androidappdesignproject.activity.rxJavaActivity.BlockActivity;
+import com.hutao.androidappdesignproject.activity.rxJavaActivity.BooleanActivity;
+import com.hutao.androidappdesignproject.activity.rxJavaActivity.BuildRxActivity;
+import com.hutao.androidappdesignproject.activity.rxJavaActivity.FilterActivity;
+import com.hutao.androidappdesignproject.activity.rxJavaActivity.MathActivity;
+import com.hutao.androidappdesignproject.activity.rxJavaActivity.StringActivity;
+import com.hutao.androidappdesignproject.activity.rxJavaActivity.TransformActivity;
 import com.hutao.androidappdesignproject.config.Constant;
-import com.hutao.androidappdesignproject.dataBindingActivity.BindFormulaActivity;
-import com.hutao.androidappdesignproject.dataBindingActivity.BindTwoWayActivity;
+import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindFormulaActivity;
+import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindTwoWayActivity;
 import com.hutao.androidappdesignproject.fragment.baseFragment.AbsBaseFragment;
 import com.hutao.androidappdesignproject.fragment.uiLib.RefreshFragment;
 
@@ -112,7 +120,30 @@ public class DetailActivity extends ToolBarActivity {
                 break;
             case Constant.TAB_3:
                 break;
-            case Constant.TAB_4:
+            case Constant.TAB_4://RxJava2.0操作API
+                switch (mTagretPosition) {
+                    case 0://创建操作符
+                        startNextActivity(BuildRxActivity.class);
+                        break;
+                    case 1://变换操作符
+                        startNextActivity(TransformActivity.class);
+                        break;
+                    case 2://过滤
+                        startNextActivity(FilterActivity.class);
+                        break;
+                    case 3://布尔操作
+                        startNextActivity(BooleanActivity.class);
+                        break;
+                    case 4://算术聚合操作
+                        startNextActivity(MathActivity.class);
+                        break;
+                    case 5://String字符串操作
+                        startNextActivity(StringActivity.class);
+                        break;
+                    case 6://背压Backpressure
+                        break;
+                }
+                finish();
                 break;
             case Constant.TAB_5:
                 switch (mTagretPosition) {
@@ -140,6 +171,14 @@ public class DetailActivity extends ToolBarActivity {
 //            case Constant.TAB_6:
 //                break;
             case Constant.TAB_7:
+                switch (mTagretPosition) {
+                    case 0:
+                        startNextActivity(NormalColorActivity.class);
+                        break;
+                    case 1:
+                        break;
+                }
+                finish();
                 break;
             case Constant.TAB_8:
                 break;

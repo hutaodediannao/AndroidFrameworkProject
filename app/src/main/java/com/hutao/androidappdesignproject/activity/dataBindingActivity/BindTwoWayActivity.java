@@ -1,4 +1,4 @@
-package com.hutao.androidappdesignproject.dataBindingActivity;
+package com.hutao.androidappdesignproject.activity.dataBindingActivity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;

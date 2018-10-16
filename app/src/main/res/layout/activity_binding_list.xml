@@ -5,7 +5,7 @@
     <data>
         <variable
             name="presenter"
-            type="com.hutao.androidappdesignproject.dataBindingActivity.BindingListActivity.Presenter">
+            type="com.hutao.androidappdesignproject.activity.dataBindingActivity.BindingListActivity.Presenter">
         </variable>
     </data>
 

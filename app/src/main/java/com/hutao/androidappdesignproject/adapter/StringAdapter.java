@@ -17,12 +17,12 @@ public class StringAdapter extends AbsBaseRecycleAdapter<String> {
     }
 
     @Override
-    int getLayout() {
+    public int getLayout() {
         return R.layout.item_textview;
     }
 
     @Override
-    void bindHolder(CommonRecycleHolder holder, String s, int position) {
+    public void bindHolder(CommonRecycleHolder holder, String s, int position) {
         holder.setTextView(R.id.tv, s);
     }
 }

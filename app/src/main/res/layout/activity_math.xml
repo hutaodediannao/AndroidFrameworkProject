@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hutao.androidappdesignproject.activity.rxJavaActivity.MathActivity">
+
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="min"
+        android:text="Min" />
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="max"
+        android:text="Max" />
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="count"
+        android:text="Count" />
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="sum"
+        android:text="Sum" />
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="concat"
+        android:text="Concat" />
+
+</LinearLayout>

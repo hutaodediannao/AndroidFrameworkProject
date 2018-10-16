@@ -29,12 +29,21 @@
         <activity android:name=".activity.DetailActivity" />
         <activity android:name=".activity.ImageBrowserActivity" />
         <activity android:name=".activity.WebActivity" />
-        <activity android:name=".dataBindingActivity.BindDataBaseActivity" />
-        <activity android:name=".dataBindingActivity.BindTwoWayActivity" />
-        <activity android:name=".dataBindingActivity.BindFormulaActivity" />
-        <activity android:name=".dataBindingActivity.BindingListActivity" />
-        <activity android:name=".dataBindingActivity.BindAnimActivity" />
-        <activity android:name=".dataBindingActivity.BindAttActivity"></activity>
+        <activity android:name=".activity.dataBindingActivity.BindDataBaseActivity" />
+        <activity android:name=".activity.dataBindingActivity.BindTwoWayActivity" />
+        <activity android:name=".activity.dataBindingActivity.BindFormulaActivity" />
+        <activity android:name=".activity.dataBindingActivity.BindingListActivity" />
+        <activity android:name=".activity.dataBindingActivity.BindAnimActivity" />
+        <activity android:name=".activity.dataBindingActivity.BindAttActivity" />
+        <activity android:name=".activity.ColorActivity.NormalColorActivity" />
+        <activity android:name=".activity.rxJavaActivity.BuildRxActivity" />
+        <activity android:name=".activity.rxJavaActivity.TransformActivity" />
+        <activity android:name=".activity.rxJavaActivity.FilterActivity" />
+        <activity android:name=".activity.rxJavaActivity.BooleanActivity" />
+        <activity android:name=".activity.rxJavaActivity.MathActivity" />
+        <activity android:name=".activity.rxJavaActivity.BlockActivity" />
+        <activity android:name=".activity.rxJavaActivity.StringActivity" />
+        <activity android:name=".activity.rxJavaActivity.BackpressureActivity"></activity>
     </application>
 
 </manifest>

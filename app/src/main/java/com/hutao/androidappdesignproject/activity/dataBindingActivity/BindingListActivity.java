@@ -1,4 +1,4 @@
-package com.hutao.androidappdesignproject.dataBindingActivity;
+package com.hutao.androidappdesignproject.activity.dataBindingActivity;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -20,7 +20,6 @@ import com.hutao.androidappdesignproject.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * 描述: dataBinding列表绑定

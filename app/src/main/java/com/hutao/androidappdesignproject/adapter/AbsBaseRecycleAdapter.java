@@ -14,8 +14,8 @@ import java.util.List;
  */
 public abstract class AbsBaseRecycleAdapter<T> extends RecyclerView.Adapter<CommonRecycleHolder> {
 
-    private Context mContext;
-    private List<T> mList;
+    public Context mContext;
+    public List<T> mList;
 
     public AbsBaseRecycleAdapter(Context mContext, List<T> mList) {
         this.mContext = mContext;
@@ -48,9 +48,9 @@ public abstract class AbsBaseRecycleAdapter<T> extends RecyclerView.Adapter<Comm
         return position;
     }
 
-    abstract int getLayout();
+    public abstract int getLayout();
 
-    abstract void bindHolder(CommonRecycleHolder holder, T t, int position);
+    public abstract void bindHolder(CommonRecycleHolder holder, T t, int position);
 
     public interface OnItemClickListener<T>{
         void clickItem(int position, T t);
