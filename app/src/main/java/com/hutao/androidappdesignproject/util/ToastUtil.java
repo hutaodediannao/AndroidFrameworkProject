@@ -12,19 +12,26 @@ public class ToastUtil {
 
     private static Toast mToast = null;
 
-    public static void showToast(Context context, String text, int duration) {
+    public static void showToast(final Context context, final String text, final int duration) {
         if (context == null || StringUtil.isEmpty(text)) return;
-        cancelToast();
-        mToast = Toast.makeText(context, text, duration);
-        mToast.show();
+        final android.os.Handler handler = new android.os.Handler(context.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                cancelToast();
+                mToast = Toast.makeText(context, text, duration);
+                mToast.show();
+                handler.removeCallbacks(this);
+            }
+        });
     }
 
-    public static void showToastShort(Context context, String text) {
+    public static void showToast(Context context, String text) {
         showToast(context, text, Toast.LENGTH_SHORT);
     }
 
-    public static void showToastShort(Context context, int resId) {
-        showToastShort(context, context.getString(resId));
+    public static void showToast(Context context, int resId) {
+        showToast(context, context.getString(resId));
     }
 
     public static void showToastLong(Context context, String text) {

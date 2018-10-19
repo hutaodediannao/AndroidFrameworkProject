@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aliceblue"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.hutao.androidappdesignproject.activity.DbHelperActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:weightSum="5">
+
+            <EditText
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="name:" />
+
+            <EditText
+                android:id="@+id/tvAge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:hint="age:" />
+
+            <EditText
+                android:id="@+id/tvAvator"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="avator:" />
+
+
+            <EditText
+                android:id="@+id/tvCity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="city:" />
+
+            <CheckBox
+                android:id="@+id/cbStudent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="学生" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="insert"
+            android:text="插入" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="removeAll"
+            android:text="删除所有数据" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="update"
+            android:text="修改所有数据" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="query"
+            android:text="查询所有" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/search"
+                android:paddingLeft="10dp"
+                android:background="@color/white"
+                android:hint="年龄:"/>
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:text="根据年龄匹配搜索"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

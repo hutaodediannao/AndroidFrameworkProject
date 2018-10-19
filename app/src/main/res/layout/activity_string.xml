@@ -7,20 +7,25 @@
     android:orientation="vertical"
     tools:context="com.hutao.androidappdesignproject.activity.rxJavaActivity.StringActivity">
 
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="split"
+        android:text="split" />
 
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="decode"
+        android:text="decode" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <Button
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="encode"
+        android:text="encode" />
 
 </LinearLayout>

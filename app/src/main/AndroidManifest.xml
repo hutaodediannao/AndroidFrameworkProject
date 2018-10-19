@@ -7,18 +7,22 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     //用于硬盘缓存和读取   
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-       
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".Application"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/appcion"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.GuideActivity">
+        <activity android:name=".activity.GuideActivity" android:theme="@style/guideStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,7 +47,10 @@
         <activity android:name=".activity.rxJavaActivity.MathActivity" />
         <activity android:name=".activity.rxJavaActivity.BlockActivity" />
         <activity android:name=".activity.rxJavaActivity.StringActivity" />
-        <activity android:name=".activity.rxJavaActivity.BackpressureActivity"></activity>
+        <activity android:name=".activity.rxJavaActivity.BackpressureActivity" />
+        <activity android:name=".activity.imgLoadActivity.GlideActivity" />
+        <activity android:name=".activity.DbHelperActivity" />
+        <activity android:name=".activity.AndroidNewStyleActivity"/>
     </application>
 
 </manifest>

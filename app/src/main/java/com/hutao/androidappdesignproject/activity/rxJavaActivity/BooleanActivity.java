@@ -90,7 +90,7 @@ public class BooleanActivity extends ToolBarActivity {
                 .takeWhile(new Predicate<Integer>() {
                     @Override
                     public boolean test(Integer integer) throws Exception {
-                        return integer > 3;
+                        return integer < 4;
                     }
                 }).subscribe(new Consumer<Integer>() {
             @Override

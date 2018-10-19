@@ -12,6 +12,7 @@ import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindAnimAc
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindAttActivity;
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindingListActivity;
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindDataBaseActivity;
+import com.hutao.androidappdesignproject.activity.imgLoadActivity.GlideActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.BlockActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.BooleanActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.BuildRxActivity;
@@ -114,11 +115,32 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                 }
                 break;
-            case Constant.TAB_1:
+            case Constant.TAB_1://数据库框架
+                switch (mTagretPosition) {
+                    case 0://原生数据库框架
+
+                        break;
+                    case 1://GreenDao框架
+                        startNextActivity(DbHelperActivity.class);
+                        break;
+                    case 2://OrmLite框架
+
+                        break;
+                }
+                finish();
                 break;
             case Constant.TAB_2:
                 break;
             case Constant.TAB_3:
+                switch (mTagretPosition) {
+                    case 0:
+                        startNextActivity(GlideActivity.class);
+                        break;
+                    case 1:
+
+                        break;
+                }
+                finish();
                 break;
             case Constant.TAB_4://RxJava2.0操作API
                 switch (mTagretPosition) {
@@ -181,6 +203,20 @@ public class DetailActivity extends ToolBarActivity {
                 finish();
                 break;
             case Constant.TAB_8:
+                switch (mTagretPosition) {
+                    case 0://6.0权限控制
+                        startNextActivity(AndroidNewStyleActivity.class);
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                }
+                finish();
                 break;
             case Constant.TAB_9:
                 break;

@@ -92,27 +92,19 @@ public class BitmapUtil {
     }
 
     //设置一个自定义大小的圆角网络图片
-    public static void setRaidusNetImageView(Object o, String imgSrcUrl, final ImageView imageView, int dpWidthValue, int dpHeightValue) {
-        Context context = null;
-        if (o instanceof Activity) {
-            context = (Context) o;
-        } else if (o instanceof Fragment) {
-            context = ((Fragment) o).getContext();
-        }
-
-        final Context finalContext = context;
-        options.override(dpWidthValue, dpHeightValue);// 指定加载宽高
+    public static void setRaidusNetImageView(final Context context, String imgSrcUrl, final ImageView imageView, int dpWidthValue, int dpHeightValue) {
+        options.override(DensityUtil.dip2px(context, dpWidthValue), DensityUtil.dip2px(context, dpHeightValue));// 指定加载宽高
         Glide.with(context)
                 .asBitmap()
                 .load(imgSrcUrl)
                 .thumbnail(0.5f)
-                .apply(options)
+                .apply(circleOptions)
                 .into(new BitmapImageViewTarget(imageView) {
                     @Override
                     protected void setResource(Bitmap resource) {
                         RoundedBitmapDrawable circularBitmapDrawable =
-                                RoundedBitmapDrawableFactory.create(finalContext.getResources(), resource);
-                        circularBitmapDrawable.setCornerRadius(DensityUtil.dip2px(finalContext, 5));
+                                RoundedBitmapDrawableFactory.create(context.getResources(), resource);
+                        circularBitmapDrawable.setCornerRadius(DensityUtil.dip2px(context, 5));
                         imageView.setImageDrawable(circularBitmapDrawable);
                     }
                 });
@@ -144,7 +136,7 @@ public class BitmapUtil {
         }
 
         options.centerInside()
-        .override(DensityUtil.getScreenWidth(context), DensityUtil.getScreenHeight(context));
+                .override(DensityUtil.getScreenWidth(context), DensityUtil.getScreenHeight(context));
         Glide.with(context)
                 .asBitmap()
                 .load(imgSrcUrl)
@@ -162,7 +154,7 @@ public class BitmapUtil {
         }
 
         options.override(dpWidthValue, dpHeightValue)
-        .error(errorImgRes).placeholder(defacultImgRes);
+                .error(errorImgRes).placeholder(defacultImgRes);
         Glide.with(context)
                 .asBitmap()
                 .load(imgSrcUrl)
@@ -206,44 +198,23 @@ public class BitmapUtil {
                 .into(imageView);
     }
 
-    public static void loadGifResource(String gifSrcUrl, ImageView iv, Context context) {
+    public static void loadGifResource(String gifSrcUrl, Context context, ImageView iv) {
         Glide.with(context)
                 .asGif()
                 .load(gifSrcUrl)
-//                .apply(options)
                 .into(iv);
     }
 
     public static void loadImg(Context context, String imgSrcUrl, final ImageView imageView, final int width, int height, int listSize) {
         options.override(width, height);    //指定图片的尺寸
-        switch (listSize) {
-            case 1://只有一张图片，使用自适应高度
-                Glide.with(context)
-                        .asBitmap()
-                        .load(imgSrcUrl)
-                        .apply(options)
-                        .into(new SimpleTarget<Bitmap>() {
-                            @Override
-                            public void onResourceReady(@NonNull Bitmap bitmap, @Nullable Transition<? super Bitmap> transition) {
-                                int bitmapWidth = bitmap.getWidth();
-                                int bitmapHeight = bitmap.getHeight();
-                                FrameLayout.LayoutParams l = (FrameLayout.LayoutParams) imageView.getLayoutParams();
-                                l.height = bitmapHeight * width / bitmapWidth;
-                                imageView.setImageBitmap(bitmap);
-                            }
-                        });
-                break;
-            default://有多张图片，使用宽高相同的参数
-                Glide.with(context)
-                        .asBitmap()
-                        .load(imgSrcUrl)
-                        .apply(options)
-                        .into(imageView);
-                break;
-        }
+        Glide.with(context)
+                .asBitmap()
+                .load(imgSrcUrl)
+                .apply(options)
+                .into(imageView);
     }
 
-    public static void loadScreenWidthNetImg(final Context context,final ImageView iv, String imgUrl) {
+    public static void loadScreenWidthNetImg(final Context context, String imgUrl, final ImageView iv) {
         RequestOptions options = //普通图片
                 new RequestOptions()
                         .error(R.mipmap.ic_launcher)    //加载错误之后的错误图
@@ -262,7 +233,7 @@ public class BitmapUtil {
                     public void onResourceReady(@NonNull Bitmap bitmap, @Nullable Transition<? super Bitmap> transition) {
                         int bitmapWidth = bitmap.getWidth();
                         int bitmapHeight = bitmap.getHeight();
-                        float ls = bitmapHeight*1.0f / bitmapWidth;
+                        float ls = bitmapHeight * 1.0f / bitmapWidth;
 
                         ViewGroup.LayoutParams lp = iv.getLayoutParams();
                         lp.width = DensityUtil.getScreenWidth(context);
@@ -277,6 +248,7 @@ public class BitmapUtil {
 
     /**
      * 手动回收图片
+     *
      * @param iv
      */
     public static void clearImageViewCache(ImageView iv) {
@@ -288,7 +260,7 @@ public class BitmapUtil {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         image.compress(Bitmap.CompressFormat.JPEG, 100, baos);//质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
         int options = 100;
-        while ( baos.toByteArray().length / 1024>kbSize) {	//循环判断如果压缩后图片是否大于kbSizekb,大于继续压缩
+        while (baos.toByteArray().length / 1024 > kbSize) {    //循环判断如果压缩后图片是否大于kbSizekb,大于继续压缩
             baos.reset();//重置baos即清空baos
             image.compress(Bitmap.CompressFormat.JPEG, options, baos);//这里压缩options%，把压缩后的数据存放到baos中
             options -= 10;//每次都减少10
@@ -298,7 +270,9 @@ public class BitmapUtil {
         return bitmap;
     }
 
-    /**通过图片url生成Bitmap对象
+    /**
+     * 通过图片url生成Bitmap对象
+     *
      * @param urlpath
      * @return Bitmap
      * 根据图片url获取图片对象
