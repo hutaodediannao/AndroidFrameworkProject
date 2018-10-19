@@ -93,6 +93,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/etAge"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_toLeftOf="@+id/search"
@@ -102,11 +103,51 @@
 
             <Button
                 android:id="@+id/search"
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
+                android:onClick="search2"
                 android:layout_alignParentRight="true"
-                android:text="根据年龄匹配搜索"/>
+                android:singleLine="true"
+                android:text="Where根据年龄匹配搜索"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/aliceblue"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etOffest"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:inputType="number"
+                android:background="@color/darkgrey"
+                android:hint="开始下标"/>
+
+            <EditText
+                android:id="@+id/etLimit"
+                android:layout_toRightOf="@+id/etOffest"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:background="@color/darkgrey"
+                android:hint="中止下标"/>
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="limit"
+                android:text="开始根据分页查询"/>
 
         </RelativeLayout>
 
