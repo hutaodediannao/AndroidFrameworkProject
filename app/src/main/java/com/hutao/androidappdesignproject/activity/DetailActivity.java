@@ -115,6 +115,7 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 18://VLayout布局gtegvrfrgvfrffe
                         startNextActivity(VLayoutActivity.class);
+                        finish();
                         break;
                 }
                 break;

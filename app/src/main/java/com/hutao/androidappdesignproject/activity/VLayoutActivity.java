@@ -16,6 +16,7 @@ import com.alibaba.android.vlayout.VirtualLayoutManager;
 import com.alibaba.android.vlayout.layout.GridLayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.alibaba.android.vlayout.layout.OnePlusNLayoutHelper;
+import com.alibaba.android.vlayout.layout.SingleLayoutHelper;
 import com.hutao.androidappdesignproject.R;
 
 import java.util.LinkedList;
@@ -40,7 +41,8 @@ public class VLayoutActivity extends ToolBarActivity {
         VirtualLayoutManager virtualLayoutManager = new VirtualLayoutManager(this);
         recyclerView.setLayoutManager(virtualLayoutManager);
 
-        OnePlusNLayoutHelper helper = new OnePlusNLayoutHelper();
+        OnePlusNLayoutHelper onePlusNLayoutHelper = new OnePlusNLayoutHelper();
+        SingleLayoutHelper singleLayoutHelper = new SingleLayoutHelper();
 
         //设置线性布局
         LinearLayoutHelper linearLayoutHelper = new LinearLayoutHelper();
@@ -52,13 +54,16 @@ public class VLayoutActivity extends ToolBarActivity {
         LinearLayoutHelper linearLayoutHelper3 = new LinearLayoutHelper();
 
         LinkedList<DelegateAdapter.Adapter> adapters = new LinkedList<>();
-        MyAdapterB adapter = new MyAdapterB(R.layout.vlayout_item_banner, helper, 3, this);
+        MyAdapterB adapter = new MyAdapterB(R.layout.vlayout_item_banner, singleLayoutHelper, 1, this);
         MyAdapter adapter0 = new MyAdapter(R.layout.vlayout_item0, linearLayoutHelper, 3, this);
         MyAdapter2 adapter1 = new MyAdapter2(R.layout.vlayout_item1, gridLayoutHelper, 3, this);
         MyAdapter3 adapter2 = new MyAdapter3(R.layout.vlayout_item2, gridLayoutHelper2, 5, this);
         MyAdapter4 adapter3 = new MyAdapter4(R.layout.vlayout_item3, linearLayoutHelper3, 5, this);
+        MyAdapterOneN adapter4 = new MyAdapterOneN(R.layout.vlayout_item_one_n, onePlusNLayoutHelper, 3, this);
+
         adapters.add(adapter);
         adapters.add(adapter0);
+        adapters.add(adapter4);
         adapters.add(adapter1);
         adapters.add(adapter2);
         adapters.add(adapter3);
@@ -156,6 +161,47 @@ public class VLayoutActivity extends ToolBarActivity {
         @Override
         public int getItemViewType(int position) {
             return 1;
+        }
+    }
+
+    class MyAdapterOneN extends DelegateAdapter.Adapter<MyViewHolder> {
+
+        private LayoutHelper mLayoutHelper;
+        private int mLayout;
+        private int mItemCount;
+        private Context mContext;
+
+        public MyAdapterOneN(int layout, LayoutHelper layoutHelper, int itemCount, Context context) {
+            this.mLayoutHelper = layoutHelper;
+            this.mLayout = layout;
+            this.mItemCount = itemCount;
+            this.mContext = context;
+        }
+
+        @Override
+        public LayoutHelper onCreateLayoutHelper() {
+            return mLayoutHelper;
+        }
+
+        @NonNull
+        @Override
+        public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View itemView = LayoutInflater.from(mContext).inflate(mLayout, parent, false);
+            return new MyViewHolder(itemView);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        }
+
+        @Override
+        public int getItemCount() {
+            return mItemCount;
+        }
+
+        @Override
+        public int getItemViewType(int position) {
+            return 5;
         }
     }
 
