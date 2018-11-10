@@ -113,6 +113,9 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 17:
                         break;
+                    case 18://VLayout布局gtegvrfrgvfrffe
+                        startNextActivity(VLayoutActivity.class);
+                        break;
                 }
                 break;
             case Constant.TAB_1://数据库框架

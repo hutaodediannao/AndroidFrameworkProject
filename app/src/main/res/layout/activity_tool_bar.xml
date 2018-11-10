@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/red"
     tools:context="com.hutao.androidappdesignproject.activity.ToolBarActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:paddingTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@android:color/holo_red_light"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
         android:minHeight="?attr/actionBarSize"
         style="@style/AppTheme.MyDrawerArrowStyle"
         app:navigationIcon="@android:color/transparent"
@@ -25,7 +26,6 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@android:color/transparent"
-            android:paddingTop="5dp"
             android:singleLine="true"
             android:ellipsize="marquee"
             android:focusable="true"

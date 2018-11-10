@@ -61,6 +61,7 @@ public class Constant {
                 list.add("CardView+阴影效果");
                 list.add("统计图类的UI");
                 list.add("Zxing二维码扫描控件");
+                list.add("阿里VLayout控件");
                 break;
             case Constant.TAB_1:
                 list.add("原生数据库基本操作封装框架");

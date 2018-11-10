@@ -5,6 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -43,6 +44,12 @@ public class ToolBarActivity extends BaseActivity {
 
         mRootView = LayoutInflater.from(this).inflate(R.layout.activity_tool_bar, null, false);
         super.setContentView(mRootView, params);
+
+        // 在setContentView之后，适配顶部状态栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        //  适配底部导航栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
         mContainer = findViewById(R.id.container);
         mContainer.addView(view);
