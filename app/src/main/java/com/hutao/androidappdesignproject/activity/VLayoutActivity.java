@@ -31,8 +31,6 @@ public class VLayoutActivity extends ToolBarActivity {
         setContentView(R.layout.activity_vlayout);
 
         initView();
-
-
     }
 
     private void initView() {
