@@ -111,7 +111,9 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 16:
                         break;
-                    case 17:
+                    case 17://Zxing扫描二维码
+                        startNextActivity(ZxingActivity.class);
+                        finish();
                         break;
                     case 18://VLayout布局gtegvrfrgvfrffe
                         startNextActivity(VLayoutActivity.class);
