@@ -13,10 +13,11 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -59,7 +60,9 @@
         <activity android:name=".activity.DbHelperActivity" />
         <activity android:name=".activity.AndroidNewStyleActivity" />
         <activity android:name=".activity.VLayoutActivity" />
-        <activity android:name=".activity.ZxingActivity"/>
+        <activity android:name=".activity.ZxingActivity" />
+        <activity android:name=".activity.ImgBroswerActivity"/>
+
     </application>
 
 </manifest>

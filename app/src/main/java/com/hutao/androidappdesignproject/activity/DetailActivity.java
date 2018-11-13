@@ -103,7 +103,9 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 12:
                         break;
-                    case 13:
+                    case 13://九宫格图片选择器
+                        startNextActivity(ImgBroswerActivity.class);
+                        finish();
                         break;
                     case 14:
                         break;

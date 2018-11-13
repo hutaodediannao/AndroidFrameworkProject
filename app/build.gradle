@@ -29,6 +29,9 @@ greendao {
 }
 
 dependencies {
+
+    implementation 'com.yuyh.imgsel:library:2.0.6'
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     //noinspection GradleCompatible
@@ -76,4 +79,7 @@ dependencies {
     implementation('com.alibaba.android:vlayout:1.0.3@aar') { transitive = true }
     /*添加依赖*/
     implementation 'com.github.yuzhiqiang1993:zxing:2.2.1'
+    /*图片选择器控件*/
+
+
 }

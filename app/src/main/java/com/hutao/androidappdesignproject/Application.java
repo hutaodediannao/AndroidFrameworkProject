@@ -16,6 +16,16 @@ public class Application extends android.app.Application {
 
         //初始化webView
         initX5WebView(this);
+
+        //初始化图片选择器属性
+        initImgSelectorConfig();
+    }
+
+    private void initImgSelectorConfig() {
+
+
+
+
     }
 
     private static void initX5WebView(Context context) {
@@ -35,4 +45,6 @@ public class Application extends android.app.Application {
         //x5内核初始化接口
         QbSdk.initX5Environment(context, cb);
     }
+
+
 }

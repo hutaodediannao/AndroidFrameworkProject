@@ -24,6 +24,8 @@ public class GuideActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
+
+        startNextMainActivity();
     }
 
     private void startNextMainActivity() {
