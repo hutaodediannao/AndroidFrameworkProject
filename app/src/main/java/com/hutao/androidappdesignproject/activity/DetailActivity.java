@@ -13,13 +13,13 @@ import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindAttAct
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindingListActivity;
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindDataBaseActivity;
 import com.hutao.androidappdesignproject.activity.imgLoadActivity.GlideActivity;
-import com.hutao.androidappdesignproject.activity.rxJavaActivity.BlockActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.BooleanActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.BuildRxActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.FilterActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.MathActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.StringActivity;
 import com.hutao.androidappdesignproject.activity.rxJavaActivity.TransformActivity;
+import com.hutao.androidappdesignproject.activity.helloChartsViewFramework.ChartMainActivity;
 import com.hutao.androidappdesignproject.config.Constant;
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindFormulaActivity;
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindTwoWayActivity;
@@ -111,7 +111,10 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 15:
                         break;
-                    case 16:
+                    case 16://统计图UI
+//                        startNextActivity(ChartsViewActivity.class);
+                        startNextActivity(ChartMainActivity.class);
+                        finish();
                         break;
                     case 17://Zxing扫描二维码
                         startNextActivity(ZxingActivity.class);
