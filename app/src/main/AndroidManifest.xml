@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.hutao.androidappdesignproject">
        
     <uses-permission android:name="android.permission.INTERNET" />
@@ -27,7 +28,8 @@
         android:icon="@mipmap/appcion"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
         <activity
             android:name=".activity.GuideActivity"
             android:theme="@style/guideStyle">
@@ -65,47 +67,49 @@
         <activity android:name=".activity.ChartsViewActivity" />
         <activity
             android:name=".activity.helloChartsViewFramework.ChartMainActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".activity.helloChartsViewFramework.LineChartActivity"
-            android:label="@string/title_activity_line_chart"></activity>
+            android:label="@string/title_activity_line_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.ColumnChartActivity"
-            android:label="@string/title_activity_column_chart"></activity>
+            android:label="@string/title_activity_column_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.PieChartActivity"
-            android:label="@string/title_activity_pie_chart"></activity>
+            android:label="@string/title_activity_pie_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.BubbleChartActivity"
-            android:label="@string/title_activity_bubble_chart"></activity>
+            android:label="@string/title_activity_bubble_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.PreviewLineChartActivity"
-            android:label="@string/title_activity_preview_line_chart"></activity>
+            android:label="@string/title_activity_preview_line_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.PreviewColumnChartActivity"
-            android:label="@string/title_activity_preview_column_chart"></activity>
+            android:label="@string/title_activity_preview_column_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.ComboLineColumnChartActivity"
-            android:label="@string/title_activity_combo_line_column_chart"></activity>
+            android:label="@string/title_activity_combo_line_column_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.LineColumnDependencyActivity"
-            android:label="@string/title_activity_line_column_dependency"></activity>
+            android:label="@string/title_activity_line_column_dependency" />
         <activity
             android:name=".activity.helloChartsViewFramework.GoodBadChartActivity"
-            android:label="@string/title_activity_good_bad"></activity>
+            android:label="@string/title_activity_good_bad" />
         <activity
             android:name=".activity.helloChartsViewFramework.TempoChartActivity"
-            android:label="@string/title_activity_tempo_chart"></activity>
+            android:label="@string/title_activity_tempo_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.SpeedChartActivity"
-            android:label="@string/title_activity_speed_chart"></activity>
+            android:label="@string/title_activity_speed_chart" />
         <activity
             android:name=".activity.helloChartsViewFramework.ViewPagerChartsActivity"
-            android:label="@string/title_activity_view_pager_charts"></activity>
+            android:label="@string/title_activity_view_pager_charts" />
         <activity
             android:name=".activity.helloChartsViewFramework.AboutActivity"
-            android:label="@string/title_activity_about"></activity>
-        <activity android:name=".activity.TabVpFrmActivity"></activity>
+            android:label="@string/title_activity_about" />
+        <activity android:name=".activity.TabVpFrmActivity" />
+        <activity android:name=".activity.RemotePDFActivity" />
+        <activity android:name=".activity.CardViewActivity"></activity>
     </application>
 
 </manifest>

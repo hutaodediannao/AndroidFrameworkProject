@@ -91,7 +91,9 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 5:
                         break;
-                    case 6:
+                    case 6://PDF文件浏览器
+                        startNextActivity(RemotePDFActivity.class);
+                        finish();
                         break;
                     case 7:
                         break;
@@ -111,7 +113,9 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 14:
                         break;
-                    case 15:
+                    case 15://Card View+阴影效果
+                        startNextActivity(CardViewActivity.class);
+                        finish();
                         break;
                     case 16://统计图UI
 //                        startNextActivity(ChartsViewActivity.class);

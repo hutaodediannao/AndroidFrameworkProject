@@ -58,7 +58,7 @@ public class Constant {
                 list.add("PopWindow弹窗");
                 list.add("图片选择器");
                 list.add("RecyclerView支持的多种列表展示");
-                list.add("CardView+阴影效果");
+                list.add("CardView");
                 list.add("统计图类的UI");
                 list.add("Zxing二维码扫描控件");
                 list.add("阿里VLayout控件");
