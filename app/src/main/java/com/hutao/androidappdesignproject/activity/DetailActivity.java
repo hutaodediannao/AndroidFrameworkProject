@@ -103,7 +103,9 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 10:
                         break;
-                    case 11:
+                    case 11://弹出对话框
+                        startNextActivity(DialogActivity.class);
+                        finish();
                         break;
                     case 12:
                         break;

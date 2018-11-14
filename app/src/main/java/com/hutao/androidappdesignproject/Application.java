@@ -17,16 +17,8 @@ public class Application extends android.app.Application {
         //初始化webView
         initX5WebView(this);
 
-        //初始化图片选择器属性
-        initImgSelectorConfig();
     }
 
-    private void initImgSelectorConfig() {
-
-
-
-
-    }
 
     private static void initX5WebView(Context context) {
         //搜集本地tbs内核信息并上报服务器，服务器返回结果决定使用哪个内核。

@@ -1,4 +1,4 @@
-package com.hutao.androidappdesignproject;
+package com.hutao.androidappdesignproject.test;
 
 import android.content.Context;
 import android.widget.Toast;

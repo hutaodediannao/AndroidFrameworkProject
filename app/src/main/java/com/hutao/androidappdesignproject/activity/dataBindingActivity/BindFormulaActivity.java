@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.hutao.androidappdesignproject.R;
-import com.hutao.androidappdesignproject.Test;
+import com.hutao.androidappdesignproject.test.Test;
 import com.hutao.androidappdesignproject.activity.ToolBarActivity;
 import com.hutao.androidappdesignproject.databinding.ActivityFormulaBinding;
 import com.hutao.androidappdesignproject.model.User;

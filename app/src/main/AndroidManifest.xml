@@ -109,7 +109,8 @@
             android:label="@string/title_activity_about" />
         <activity android:name=".activity.TabVpFrmActivity" />
         <activity android:name=".activity.RemotePDFActivity" />
-        <activity android:name=".activity.CardViewActivity"></activity>
+        <activity android:name=".activity.CardViewActivity" />
+        <activity android:name=".activity.DialogActivity"></activity>
     </application>
 
 </manifest>

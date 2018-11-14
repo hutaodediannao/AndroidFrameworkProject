@@ -11,11 +11,11 @@
             name="user"
             type="com.hutao.androidappdesignproject.model.User" />
 
-        <import type="com.hutao.androidappdesignproject.Test" />
+        <import type="com.hutao.androidappdesignproject.test.Test" />
 
         <variable
             name="test"
-            type="Test" />
+            type="com.hutao.androidappdesignproject.test.Test" />
 
     </data>
 
