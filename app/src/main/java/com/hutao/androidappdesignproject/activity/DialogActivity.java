@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.hutao.androidappdesignproject.R;
 import com.hutao.androidappdesignproject.dialog.DialogFactory;
+import com.hutao.androidappdesignproject.dialog.EnterTipsDialog;
 import com.hutao.androidappdesignproject.dialog.TipsDialog;
 
 /**
@@ -32,25 +33,13 @@ public class DialogActivity extends ToolBarActivity {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void enterTipsDialog(View view) {
+        EnterTipsDialog enterTipsDialog = DialogFactory.getTipsDialogInstance(this, "对话框dialog",
+                new EnterTipsDialog.EnterClickListener() {
+                    @Override
+                    public void clickEnter(String content) {
+                        showToast(content);
+                    }
+                });
+    }
 }

@@ -17,7 +17,10 @@ public class DialogFactory {
         return tipsDialog;
     }
 
-
+    public static EnterTipsDialog getTipsDialogInstance(Context context, String content, EnterTipsDialog.EnterClickListener clickListener) {
+        EnterTipsDialog tipsDialog = new EnterTipsDialog(context, content, clickListener);
+        return tipsDialog;
+    }
 
 
 
