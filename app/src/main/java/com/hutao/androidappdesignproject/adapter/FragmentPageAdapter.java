@@ -17,26 +17,28 @@ import java.util.List;
  */
 public class FragmentPageAdapter extends FragmentPagerAdapter {
 
-    private List<AbsBaseFragment> fragmentList;
+    private List<AbsBaseFragment> mFragmentList;
+    private List<String> mTitleList;
 
-    public FragmentPageAdapter(FragmentManager fm, List<AbsBaseFragment> fragments) {
+    public FragmentPageAdapter(FragmentManager fm, List<AbsBaseFragment> fragments, List<String> titleList) {
         super(fm);
-        this.fragmentList = fragments;
+        this.mFragmentList = fragments;
+        this.mTitleList = titleList;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return fragmentList.get(position);
+        return mFragmentList.get(position);
     }
 
     @Override
     public int getCount() {
-        return fragmentList.size();
+        return mFragmentList.size();
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return Constant.TAB_List.get(position);
+        return mTitleList.get(position);
     }
 }

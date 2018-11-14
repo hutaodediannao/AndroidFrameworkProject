@@ -62,67 +62,50 @@
         <activity android:name=".activity.VLayoutActivity" />
         <activity android:name=".activity.ZxingActivity" />
         <activity android:name=".activity.ImgBroswerActivity" />
-        <activity android:name=".activity.ChartsViewActivity"/>
-
-
+        <activity android:name=".activity.ChartsViewActivity" />
         <activity
-            android:name="com.hutao.androidappdesignproject.activity.helloChartsViewFramework.ChartMainActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:name=".activity.helloChartsViewFramework.ChartMainActivity"
+            android:label="@string/app_name"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.LineChartActivity"
-            android:label="@string/title_activity_line_chart" >
-        </activity>
+            android:label="@string/title_activity_line_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.ColumnChartActivity"
-            android:label="@string/title_activity_column_chart" >
-        </activity>
+            android:label="@string/title_activity_column_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.PieChartActivity"
-            android:label="@string/title_activity_pie_chart" >
-        </activity>
+            android:label="@string/title_activity_pie_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.BubbleChartActivity"
-            android:label="@string/title_activity_bubble_chart" >
-        </activity>
+            android:label="@string/title_activity_bubble_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.PreviewLineChartActivity"
-            android:label="@string/title_activity_preview_line_chart" >
-        </activity>
+            android:label="@string/title_activity_preview_line_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.PreviewColumnChartActivity"
-            android:label="@string/title_activity_preview_column_chart" >
-        </activity>
+            android:label="@string/title_activity_preview_column_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.ComboLineColumnChartActivity"
-            android:label="@string/title_activity_combo_line_column_chart" >
-        </activity>
+            android:label="@string/title_activity_combo_line_column_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.LineColumnDependencyActivity"
-            android:label="@string/title_activity_line_column_dependency" >
-        </activity>
+            android:label="@string/title_activity_line_column_dependency"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.GoodBadChartActivity"
-            android:label="@string/title_activity_good_bad" >
-        </activity>
+            android:label="@string/title_activity_good_bad"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.TempoChartActivity"
-            android:label="@string/title_activity_tempo_chart" >
-        </activity>
+            android:label="@string/title_activity_tempo_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.SpeedChartActivity"
-            android:label="@string/title_activity_speed_chart" >
-        </activity>
+            android:label="@string/title_activity_speed_chart"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.ViewPagerChartsActivity"
-            android:label="@string/title_activity_view_pager_charts" >
-        </activity>
+            android:label="@string/title_activity_view_pager_charts"></activity>
         <activity
             android:name=".activity.helloChartsViewFramework.AboutActivity"
-            android:label="@string/title_activity_about" >
-        </activity>
-
-
+            android:label="@string/title_activity_about"></activity>
+        <activity android:name=".activity.TabVpFrmActivity"></activity>
     </application>
 
 </manifest>

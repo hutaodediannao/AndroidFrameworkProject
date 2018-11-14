@@ -83,7 +83,9 @@ public class DetailActivity extends ToolBarActivity {
                         WebActivity.startActivity("https://www.baidu.com", this);
                         finish();
                         break;
-                    case 3:
+                    case 3://Tablayout+ViewPager+Fragment滑动框架
+                        startNextActivity(TabVpFrmActivity.class);
+                        finish();
                         break;
                     case 4:
                         break;

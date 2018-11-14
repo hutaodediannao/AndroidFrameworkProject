@@ -41,6 +41,11 @@ import lecho.lib.hellocharts.view.PreviewLineChartView;
 
 public class ViewPagerChartsActivity extends ToolBarActivity implements ActionBar.TabListener {
 
+    @Override
+    public String getToolbarTitleContent() {
+        return "统计图一览";
+    }
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the sections. We use a
      * {@link FragmentPagerAdapter} derivative, which will keep every loaded fragment in memory. If this becomes too
@@ -59,8 +64,8 @@ public class ViewPagerChartsActivity extends ToolBarActivity implements ActionBa
         setContentView(R.layout.activity_view_pager_charts);
 
         // Set up the action bar.
-        final ActionBar actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+//        final ActionBar actionBar = getSupportActionBar();
+//        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -76,7 +81,7 @@ public class ViewPagerChartsActivity extends ToolBarActivity implements ActionBa
         mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
-                actionBar.setSelectedNavigationItem(position);
+//                actionBar.setSelectedNavigationItem(position);
             }
         });
 
@@ -86,7 +91,7 @@ public class ViewPagerChartsActivity extends ToolBarActivity implements ActionBa
             // the adapter. Also specify this Activity object, which implements
             // the TabListener interface, as the callback (listener) for when
             // this tab is selected.
-            actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));
+//            actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));
         }
     }
 

@@ -42,7 +42,7 @@ public class MainActivity extends ToolBarActivity {
     }
 
     private void setAdapter() {
-        fragmentPageAdapter = new FragmentPageAdapter(getSupportFragmentManager(), fragments);
+        fragmentPageAdapter = new FragmentPageAdapter(getSupportFragmentManager(), fragments, Constant.TAB_List);
         vp.setAdapter(fragmentPageAdapter);
         vp.setOffscreenPageLimit(fragments.size());//缓存全部页面
         tabLayout.setupWithViewPager(vp);
