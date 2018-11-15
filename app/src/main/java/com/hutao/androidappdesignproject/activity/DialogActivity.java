@@ -32,7 +32,6 @@ public class DialogActivity extends ToolBarActivity {
         tipsDialog.show();
     }
 
-
     public void enterTipsDialog(View view) {
         EnterTipsDialog enterTipsDialog = DialogFactory.getTipsDialogInstance(this, "对话框dialog",
                 new EnterTipsDialog.EnterClickListener() {
