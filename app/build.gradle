@@ -84,5 +84,12 @@ dependencies {
     /*PDF在线查看器*/
     implementation 'es.voghdev.pdfviewpager:library:0.2.1'
 
+    //dagger框架注解使用
+    implementation 'com.google.dagger:dagger:2.4'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+    // java注解
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+
+
 
 }

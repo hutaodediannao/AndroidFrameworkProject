@@ -66,7 +66,7 @@ public class RefreshFragment extends AbsBaseFragment implements OnRefreshListene
 
     @Override
     public void onLoadMore() {
-        io.reactivex.Observable.timer(3, TimeUnit.SECONDS,  AndroidSchedulers.mainThread())
+        io.reactivex.Observable.timer(1, TimeUnit.SECONDS,  AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<Long>() {
                     @Override
                     public void accept(Long aLong) throws Exception {
@@ -79,7 +79,7 @@ public class RefreshFragment extends AbsBaseFragment implements OnRefreshListene
 
     @Override
     public void onRefresh() {
-        io.reactivex.Observable.timer(3, TimeUnit.SECONDS, AndroidSchedulers.mainThread())
+        io.reactivex.Observable.timer(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<Long>() {
                     @Override
                     public void accept(Long aLong) throws Exception {

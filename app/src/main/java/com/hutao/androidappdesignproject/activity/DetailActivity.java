@@ -53,8 +53,6 @@ public class DetailActivity extends ToolBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        mToolbar.setNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
-
         parsetIntent();
         initView();
         addFragment();
@@ -240,12 +238,11 @@ public class DetailActivity extends ToolBarActivity {
             case Constant.TAB_9:
                 break;
         }
-
-        setToolbarTitle(mTitle);
-
     }
 
     private void initView() {
+        //统一设置头部标题
+        setToolbarTitle(mTitle);
         fragmentContainer = findViewById(R.id.fragmentContainer);
     }
 

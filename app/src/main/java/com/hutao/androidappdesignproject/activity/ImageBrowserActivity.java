@@ -15,11 +15,10 @@ import java.util.List;
 /**
  * 图片浏览公共的页面
  */
-public class ImageBrowserActivity extends BaseActivity {
+public class ImageBrowserActivity extends ToolBarActivity {
 
     public static final String IMAGE_LIST = "imageList";
     public static final String CURRENT_INDEX = "currentIndex";
-    private TextView tv;
     private ViewPager viewPager;
     private CommonBroswerNeiImageViewPagerAdapter mCommonViewPagerAdapter;
     private List<String> mImagSrcUrlList;//网络图片地址
@@ -37,6 +36,7 @@ public class ImageBrowserActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_browser);
 
+        setToolbarNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
         parseIntent();
         initView();
         setAdapter();
@@ -49,13 +49,13 @@ public class ImageBrowserActivity extends BaseActivity {
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 mCurrentIndex = position + 1;
-                tv.setText((mCurrentIndex + "/" + mImagSrcUrlList.size()));
+                setToolbarTitle(mCurrentIndex + "/" + mImagSrcUrlList.size());
             }
         });
     }
 
     private void setAdapter() {
-        tv.setText((mCurrentIndex + "/" + mImagSrcUrlList.size()));
+        setToolbarTitle((mCurrentIndex + 1) + "/" + mImagSrcUrlList.size());
         mCommonViewPagerAdapter = new CommonBroswerNeiImageViewPagerAdapter(mImagSrcUrlList, this);
         viewPager.setAdapter(mCommonViewPagerAdapter);
         viewPager.setCurrentItem(mCurrentIndex);
@@ -63,7 +63,6 @@ public class ImageBrowserActivity extends BaseActivity {
 
     private void initView() {
         viewPager = findViewById(R.id.vp);
-        tv = findViewById(R.id.tv);
     }
 
     private void parseIntent() {

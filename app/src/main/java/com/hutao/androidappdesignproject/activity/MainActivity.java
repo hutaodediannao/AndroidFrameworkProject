@@ -26,9 +26,10 @@ public class MainActivity extends ToolBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setToolbarTitle("主页");
+        setToolbarNavigationIcon(0);
         tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
-
         initFragment();
         for (int i = 0; i < fragments.size(); i++) tabLayout.addTab(tabLayout.newTab().setText(Constant.TAB_List.get(i)));
         initView();
@@ -55,11 +56,6 @@ public class MainActivity extends ToolBarActivity {
     private void initFragment() {
         fragments = new ArrayList<>();
         for (int i = 0; i < Constant.TAB_List.size(); i++) fragments.add(AbsBaseFragment.newInstance(Constant.TAB_List.get(i), ListFragment.class));
-    }
-
-    @Override
-   public String getToolbarTitleContent() {
-        return "主页";
     }
 
     @Override

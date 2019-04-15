@@ -22,7 +22,7 @@ public class ToolBarActivity extends BaseActivity {
     private View mRootView;
     private FrameLayout mContainer;
     public Toolbar mToolbar;
-    private  TextView mTitleTv;
+    private TextView mTitleTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,40 +44,34 @@ public class ToolBarActivity extends BaseActivity {
 
         mRootView = LayoutInflater.from(this).inflate(R.layout.activity_tool_bar, null, false);
         super.setContentView(mRootView, params);
-
         // 在setContentView之后，适配顶部状态栏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
         //  适配底部导航栏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
         mContainer = findViewById(R.id.container);
         mContainer.addView(view);
 
-        initToolbar(R.id.toolbar, R.id.toolbar_title, StringUtil.getContent(getToolbarTitleContent()));
+        initToolbar(R.id.toolbar, R.id.toolbar_title);
     }
 
     /**
      * 初始化toolbar
      */
-    public Toolbar initToolbar(int id, int titleId, String titleString) {
+    public Toolbar initToolbar(int id, int titleId) {
         mToolbar = findViewById(id);
         mTitleTv = findViewById(titleId);
-        mTitleTv.setText(titleString);
         setSupportActionBar(mToolbar);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowTitleEnabled(false);
-        }
-
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!isFinishing()) finish();
             }
         });
-
+        setToolbarNavigationIcon(R.drawable.ic_chevron_left_black_24dp);
         return mToolbar;
     }
 
@@ -85,8 +79,17 @@ public class ToolBarActivity extends BaseActivity {
         mTitleTv.setText(title);
     }
 
-   public String getToolbarTitleContent(){
-       return "";
-   }
+    public String getToolbarTitleContent() {
+        return "";
+    }
+
+    public void setToolbarNavigationIcon(int res) {
+        if (res != 0) {
+            //统一设置返回图标icon
+            mToolbar.setNavigationIcon(res);
+        } else {
+            mToolbar.setNavigationIcon(getResources().getDrawable(R.color.transparent));
+        }
+    }
 
 }

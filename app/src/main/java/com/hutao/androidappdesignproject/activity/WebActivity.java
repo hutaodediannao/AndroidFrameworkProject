@@ -15,6 +15,11 @@ import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 
+/**
+ * 描述: X5webView使用接入
+ * 作者: 胡涛
+ * 时间: 2019-4-15 7:28
+ */
 public class WebActivity extends ToolBarActivity {
 
     private ProgressBar mProgressBar;
