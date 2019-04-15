@@ -40,10 +40,11 @@ public class RemotePDFActivity extends ToolBarActivity implements DownloadFile.L
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_online_show);
+
+        setToolbarTitle("PDFViewPager库-PDF在线查看");
         initView();
         setDownloadListener();
     }
-
 
     protected void initView() {
         pdf_root = findViewById(R.id.remote_pdf_root);

@@ -11,14 +11,14 @@
         android:id="@+id/vp"
         android:layout_above="@+id/title"
         android:layout_width="match_parent"
-        android:background="@color/orange"
+        android:background="@color/white"
         android:layout_height="match_parent"/>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/title"
         app:tabTextColor="@color/black"
-        app:tabSelectedTextColor="@color/red"
-        app:tabIndicatorColor="@color/transparent"
+        app:tabSelectedTextColor="@color/orange"
+        app:tabIndicatorColor="@color/orange"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:background="@color/transparent"

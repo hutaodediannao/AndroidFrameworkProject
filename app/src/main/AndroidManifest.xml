@@ -108,9 +108,12 @@
             android:name=".activity.helloChartsViewFramework.AboutActivity"
             android:label="@string/title_activity_about" />
         <activity android:name=".activity.TabVpFrmActivity" />
+        <activity android:name=".activity.BottomNavigationBarActivity" />
         <activity android:name=".activity.RemotePDFActivity" />
         <activity android:name=".activity.CardViewActivity" />
-        <activity android:name=".activity.DialogActivity"></activity>
+        <activity android:name=".activity.DialogActivity" />
+        <activity android:name=".activity.CustomToolbarActivity" />
+        <activity android:name=".activity.SurfaceViewActivity"></activity>
     </application>
 
 </manifest>

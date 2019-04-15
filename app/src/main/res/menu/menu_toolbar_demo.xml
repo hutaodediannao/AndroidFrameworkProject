@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_action1"
+        android:icon="@mipmap/xx_qunliao"
+        android:title="投诉"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/toolbar_action2"
+        android:icon="@drawable/ic_default_image"
+        android:title="表扬"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/toolbar_action3"
+        android:icon="@mipmap/xx_qunliao"
+        android:title="批评"
+        app:showAsAction="never"/>
+
+</menu>

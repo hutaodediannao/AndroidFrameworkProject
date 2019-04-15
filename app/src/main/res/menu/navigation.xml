@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/xx_xiaoxi"
+        android:title="消息" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@mipmap/xx_qunliao"
+        android:title="群聊" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@mipmap/xx_wode"
+        android:title="我的" />
+</menu>

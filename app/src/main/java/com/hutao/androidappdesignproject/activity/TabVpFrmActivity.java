@@ -37,6 +37,7 @@ public class TabVpFrmActivity extends ToolBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_vp_frm);
 
+        setToolbarTitle("普通页面滑动框架UI");
         initView();
         initData();
         setAdapter();

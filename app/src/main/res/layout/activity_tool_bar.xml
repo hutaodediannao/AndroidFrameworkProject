@@ -6,16 +6,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    android:background="@color/red"
+    android:background="@color/orange"
     tools:context="com.hutao.androidappdesignproject.activity.ToolBarActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/transparent"
+        android:background="@color/orange"
         android:minHeight="?attr/actionBarSize"
         style="@style/AppTheme.MyDrawerArrowStyle"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
         app:navigationIcon="@android:color/transparent"
         app:logo="@android:color/transparent">
 

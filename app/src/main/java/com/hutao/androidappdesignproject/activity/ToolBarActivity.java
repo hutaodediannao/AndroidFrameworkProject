@@ -22,7 +22,7 @@ public class ToolBarActivity extends BaseActivity {
     private View mRootView;
     private FrameLayout mContainer;
     public Toolbar mToolbar;
-    private TextView mTitleTv;
+    public TextView mTitleTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

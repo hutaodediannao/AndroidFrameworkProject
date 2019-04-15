@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
+import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.hutao.androidappdesignproject.R;
 import com.hutao.androidappdesignproject.activity.ColorActivity.NormalColorActivity;
 import com.hutao.androidappdesignproject.activity.dataBindingActivity.BindAnimActivity;
@@ -52,8 +53,9 @@ public class DetailActivity extends ToolBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
         parsetIntent();
+        //统一设置头部标题
+        setToolbarTitle(mTitle);
         initView();
         addFragment();
     }
@@ -85,15 +87,21 @@ public class DetailActivity extends ToolBarActivity {
                         startNextActivity(TabVpFrmActivity.class);
                         finish();
                         break;
-                    case 4:
+                    case 4://底部切换的BottomNavigationBar
+                        startNextActivity(BottomNavigationBarActivity.class);
+                        finish();
                         break;
-                    case 5:
+                    case 5://Toolbar控件各种使用
+                        startNextActivity(CustomToolbarActivity.class);
+                        finish();
                         break;
                     case 6://PDF文件浏览器
                         startNextActivity(RemotePDFActivity.class);
                         finish();
                         break;
-                    case 7:
+                    case 7://SurfaceView心电图demo
+                        startNextActivity(SurfaceViewActivity.class);
+                        finish();
                         break;
                     case 8:
                         break;
@@ -241,8 +249,6 @@ public class DetailActivity extends ToolBarActivity {
     }
 
     private void initView() {
-        //统一设置头部标题
-        setToolbarTitle(mTitle);
         fragmentContainer = findViewById(R.id.fragmentContainer);
     }
 
