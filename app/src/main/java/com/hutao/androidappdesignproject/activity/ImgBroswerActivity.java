@@ -28,16 +28,11 @@ public class ImgBroswerActivity extends ToolBarActivity {
     private LinearLayout group;
 
     @Override
-    public String getToolbarTitleContent() {
-        return "图片选择器";
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_img_broswer);
+        setToolbarTitle("图片选择器");
         group = findViewById(R.id.group);
-
         // 自定义图片加载器
         ISNav.getInstance().init(new ImageLoader() {
             @Override
