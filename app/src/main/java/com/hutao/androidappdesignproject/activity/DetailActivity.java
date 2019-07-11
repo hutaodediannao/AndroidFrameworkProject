@@ -130,13 +130,19 @@ public class DetailActivity extends ToolBarActivity {
                         startNextActivity(ChartMainActivity.class);
                         finish();
                         break;
-                    case 17://Zxing扫描二维码
+                    case 17://手写自定义统计图
+                        startNextActivity(DesignChartActivity.class);
+                        finish();
+                        break;
+                    case 18://Zxing扫描二维码
                         startNextActivity(ZxingActivity.class);
                         finish();
                         break;
-                    case 18://VLayout布局gtegvrfrgvfrffe
+                    case 19://VLayout布局gtegvrfrgvfrffe
                         startNextActivity(VLayoutActivity.class);
                         finish();
+                        break;
+                    default:
                         break;
                 }
                 break;
@@ -151,10 +157,14 @@ public class DetailActivity extends ToolBarActivity {
                     case 2://OrmLite框架
 
                         break;
+                    default:
+                        break;
                 }
                 finish();
                 break;
             case Constant.TAB_2:
+                break;
+            default:
                 break;
             case Constant.TAB_3:
                 switch (mTagretPosition) {
@@ -163,6 +173,8 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 1:
 
+                        break;
+                    default:
                         break;
                 }
                 finish();
@@ -189,6 +201,8 @@ public class DetailActivity extends ToolBarActivity {
                         break;
                     case 6://背压Backpressure
                         break;
+                    default:
+                        break;
                 }
                 finish();
                 break;
@@ -212,6 +226,8 @@ public class DetailActivity extends ToolBarActivity {
                     case 5://动画
                         startNextActivity(BindAnimActivity.class);
                         break;
+                    default:
+                        break;
                 }
                 finish();
                 break;
@@ -223,6 +239,8 @@ public class DetailActivity extends ToolBarActivity {
                         startNextActivity(NormalColorActivity.class);
                         break;
                     case 1:
+                        break;
+                    default:
                         break;
                 }
                 finish();
@@ -239,6 +257,8 @@ public class DetailActivity extends ToolBarActivity {
                     case 3:
                         break;
                     case 4:
+                        break;
+                    default:
                         break;
                 }
                 finish();

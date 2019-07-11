@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hutao.androidappdesignproject">
-       
+
     <uses-permission android:name="android.permission.INTERNET" />
-    //它可以监听用户的连接状态并在用户重新连接到网络时重启之前失败的请求   
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    //用于硬盘缓存和读取   
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -30,6 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+        <activity android:name=".activity.DesignChartActivity"></activity>
         <activity
             android:name=".activity.GuideActivity"
             android:theme="@style/guideStyle">
@@ -113,7 +112,7 @@
         <activity android:name=".activity.CardViewActivity" />
         <activity android:name=".activity.DialogActivity" />
         <activity android:name=".activity.CustomToolbarActivity" />
-        <activity android:name=".activity.SurfaceViewActivity"></activity>
+        <activity android:name=".activity.SurfaceViewActivity" />
     </application>
 
 </manifest>

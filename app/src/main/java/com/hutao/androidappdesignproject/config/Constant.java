@@ -60,6 +60,7 @@ public class Constant {
                 list.add("RecyclerView支持的多种列表展示");
                 list.add("CardView");
                 list.add("统计图类的UI");
+                list.add("手写自定义统计图");
                 list.add("Zxing二维码扫描控件");
                 list.add("阿里VLayout控件");
                 break;
